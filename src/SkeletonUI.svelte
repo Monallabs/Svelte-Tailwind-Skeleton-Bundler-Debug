@@ -4,30 +4,36 @@ let visible: boolean = true;
 import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 import { faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Avatar } from '@skeletonlabs/skeleton';
- 
+import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+
+import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+let tabSet: number = 0;
+let tabsBasic = 0;
+
 </script>
 
-<Avatar src="https://i.pravatar.cc/" />
-<button type="button" class="btn-icon variant-filled"><i class="fa-solid fa-skull" />
-</button>
+<button type="button" class="btn variant-filled-primary">Button</button>
 
-{#if visible}
-    <aside class="alert variant-ghost">
-        <!-- Icon -->
-	<FontAwesomeIcon icon={faHome} />
-	<FontAwesomeIcon icon={faUser} />
+<Accordion>
+	<AccordionItem open>
+		<svelte:fragment slot="lead">TheLead</svelte:fragment>
+		<svelte:fragment slot="summary">Accordian Summary</svelte:fragment>
+		<svelte:fragment slot="content">Accordian content</svelte:fragment>
+	</AccordionItem>
 
-        <!-- Message -->
-        <div class="alert-message">
-            <h3 class="h3">A title</h3>
-            <p>Got-Message</p>
-        </div>
-        <!-- Actions -->
-        <div class="alert-actions">
-	<button class="btn variant-filled">Action</button>
-	<button class="btn-icon variant-filled">	<FontAwesomeIcon icon={faUser} />
-	</button>
-	</div>
-    </aside>
-{/if}
-            
+</Accordion>
+
+<TabGroup>
+<Tab bind:group={tabSet} name="tab1" value={0}>Books</Tab>
+<Tab bind:group={tabSet} name="tab2" value={1}>Movie</Tab>
+
+<svelte:fragment slot="panel">
+							{#if tabSet === 0}
+								<p> written or printed work consisting of pages glued or sewn together along one side and bound in covers.</p>
+								{:else if tabSet === 1}
+								<p> Movies content</p>
+							{/if}
+							
+						</svelte:fragment>
+</TabGroup>
+

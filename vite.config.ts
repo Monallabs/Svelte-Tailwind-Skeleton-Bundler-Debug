@@ -8,7 +8,7 @@ import postcss from './postcss.config.ts';
 export default defineConfig({
    plugins: [svelte(),
    purgeCss({
-			safelist: ['badge', 'btn-icon', 'variant-filled', 'fa-solid', 'fa-skull'],
+			safelist: { standard: ['badge']},
 		}
 		)
    ],
