@@ -1,17 +1,15 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
-
 import postcss from './postcss.config.ts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
    plugins: [svelte(),
-   purgeCss({
-			safelist: ['badge', 'btn-icon', 'variant-filled', 'fa-solid', 'fa-skull'],
-		}
-		)
-   ],
+
+
+
+],
+
    css: { postcss
 
 },
