@@ -12,8 +12,6 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@skeletonlabs/skeleton": "^2.8.0",
-    "@skeletonlabs/tw-plugin": "^0.3.1",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
@@ -39,9 +37,6 @@
     "vite-plugin-tailwind-purgecss": "^0.2.0"
   },
   "dependencies": {
-    "@floating-ui/dom": "^1.6.1",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/svelte-fontawesome": "^0.2.2"
+    "@floating-ui/dom": "^1.6.1"
   }
 }
