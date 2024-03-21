@@ -18,12 +18,12 @@ export default {
    theme: {
       extend: {}
    },
-   plugins: [
+      plugins: [
       forms,
       typography,
       skeleton({
          themes: {
-            custom: [theme]
+            preset: ["skeleton", "wintry", "modern", "rocket", "seafoam", "vintage", "sahara", "crimson"]
          }
       })
    ]

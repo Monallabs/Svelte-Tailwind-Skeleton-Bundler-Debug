@@ -7,7 +7,7 @@ import { Avatar } from '@skeletonlabs/skeleton';
  
 </script>
 
-<Avatar src="https://i.pravatar.cc/" />
+
 <button type="button" class="btn-icon variant-filled"><i class="fa-solid fa-skull" />
 </button>
 
